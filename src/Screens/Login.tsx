@@ -99,7 +99,7 @@ const Login: FC = () => {
     return(
         <View>
             <Text 
-                style={ styles.txtTitle}>Welcome to DashBoard</Text>
+                style={ styles.txtTitle}>Welcome to MyApp</Text>
             <TextInput
                 style={styles.userNameInput}
                 placeholder="UserName"

@@ -25,7 +25,7 @@ const SignUp: FC = () => {
 
     const [userName, setUserName] = useState<string>('');
     const [password, setPassword] = useState<string>('');
-    const [confirmPassword, setConfirmPassword] = useState('');
+    const [confirmPassword, setConfirmPassword] = useState<string>('');
     const [error , setError] = useState<string>('');
     const navigation = useNavigation<screenNavigation>();
     

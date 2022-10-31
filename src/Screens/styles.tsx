@@ -56,7 +56,9 @@ export default StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold',
     backgroundColor:'#fff',
-    borderRadius: 10
+    borderRadius: 10,
+    borderColor: "#000",
+    borderWidth: 1
   },
   profileScreenImageView: {
     height: 150, 
