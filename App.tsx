@@ -4,7 +4,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { SafeAreaView } from 'react-native';
 
 import LoginScreen from './src/Screens/Login';
-import SignUpScreen from './src/Screens/SingUp';
+import SignUpScreen from './src/Screens/SignUp';
 import AllPostsScreen from './src/Screens/AllPosts';
 import PostDetailsScreen from "./src/Screens/PostDetails";
 

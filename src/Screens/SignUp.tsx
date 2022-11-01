@@ -91,15 +91,17 @@ const SignUp: FC = () => {
         <ScrollView>
             {/* Display screen title */}
             <Text 
-                style={ styles.txtTitle}>Sign Up
+                testID="title" style={ styles.txtTitle}>Sign Up
             </Text>
 
             {/* TextInput for accepting 'UserName' */}
             <View style={styles.outerView}>
                 <Text 
+                    testID="labelUserName"
                     style={{ fontSize:14, color: '#000', marginLeft: wp(15)}}>UserName
                 </Text>
                 <TextInput
+                    testID="userNameInput"
                     style={styles.userNameInput}
                     placeholder="UserName"
                     placeholderTextColor={'grey'}
@@ -111,9 +113,11 @@ const SignUp: FC = () => {
             {/* TextInput for accepting 'Password' */}
             <View style={ styles.outerView }>
                 <Text 
+                    testID="labelPwd"
                     style={{ fontSize:14, color: '#000', marginLeft: wp(15)}}>Password
                 </Text>
                 <TextInput
+                    testID="pwdInput"
                     style={styles.userNameInput}
                     placeholder="Password"
                     secureTextEntry={true}
@@ -125,9 +129,11 @@ const SignUp: FC = () => {
             {/* TextInput for accepting 'Confirm Password' */}
             <View style={ styles.outerView }>
                 <Text 
+                    testID="labelConfirmPwd"
                     style={{ fontSize:14, color: '#000', marginLeft: wp(15)}}>Confirm Password
                 </Text>
                 <TextInput
+                    testID="confirmPwdInput"
                     style={styles.userNameInput}
                     placeholder="Confirm Password"
                     secureTextEntry={true}
@@ -141,19 +147,21 @@ const SignUp: FC = () => {
 
             {/* Button for submitting "Create Account" request */}
             <TouchableOpacity
+                testID="createAcntButton"
                 style={{...styles.btnLogin, alignSelf: "center"}}
                 onPress={() => validate()}
             >
-                <Text style={styles.txtLabel}>Create Account</Text>
+                <Text testID="createAcntLabel" style={styles.txtLabel}>Create Account</Text>
             </TouchableOpacity>
 
             {/* Provide the user option to redirect to Login Screen if already registered */}
             <TouchableOpacity
-              onPress={() => navigation.navigate('Login')}
+                testID="signInButton"
+                onPress={() => navigation.navigate('Login')}
             >
-              <Text style={{...styles.txtSignUp, marginTop: hp(3)}}>
+              <Text testID="alreadyUsrLabel" style={{...styles.txtSignUp, marginTop: hp(3)}}>
                 Already an User ? 
-                <Text style={styles.btnSignUp}> SignIn</Text>
+                <Text testID="signInLabel" style={styles.btnSignUp}> SignIn</Text>
               </Text>
             </TouchableOpacity>
 
@@ -166,15 +174,19 @@ const SignUp: FC = () => {
                 }}
                 >
                 <Text
+                    testID="userNameRules"
                     style={{ marginBottom: hp(1), fontSize: 16 , fontWeight: 'bold' }}
                 >UserName may contain the following - </Text>
                 <Text
+                    testID="userNameRule1"
                     style={{ marginBottom: hp(1) }}
                     >1) Lower case or Upper case letters</Text>
                 <Text
+                    testID="userNameRule2"
                     style={{ marginBottom: hp(1) }}
                     >2) Digits from 0 - 9</Text>
                 <Text
+                    testID="userNameRule3"
                     style={{ marginBottom: hp(1) }}
                     >3) Maximum 30 in length</Text>
             </View>
@@ -188,21 +200,27 @@ const SignUp: FC = () => {
                 }}
                 >
                 <Text
+                    testID="pwdRules"
                     style={{ marginBottom: hp(1), fontSize: 16 , fontWeight: 'bold' }}
                 >Password must contain the following - </Text>
                 <Text
+                    testID="pwdRule1"
                     style={{ marginBottom: hp(1) }}
                     >1) At least one upper case letter</Text>
                 <Text
+                    testID="pwdRule2"
                     style={{ marginBottom: hp(1) }}
                     >2) At least one lower case letter</Text>
                 <Text
+                    testID="pwdRule3"
                     style={{ marginBottom: hp(1)}}
                     >3) At least one digit</Text>
                 <Text
+                    testID="pwdRule4"
                     style={{ marginBottom: hp(1) }}
                     >4) At least one special character</Text>
                 <Text
+                    testID="pwdRule5"
                     style={{ marginBottom: hp(1) }}
                     >5) Minimum 8 in length</Text>
             </View>

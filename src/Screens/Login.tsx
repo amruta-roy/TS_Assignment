@@ -99,8 +99,10 @@ const Login: FC = () => {
     return(
         <View>
             <Text 
+                testID="Title"
                 style={ styles.txtTitle}>Welcome to MyApp</Text>
             <TextInput
+                testID="UserName"
                 style={styles.userNameInput}
                 placeholder="UserName"
                 placeholderTextColor={'grey'}
@@ -109,6 +111,7 @@ const Login: FC = () => {
             />
 
             <TextInput
+                testID="Pwd"
                 style={styles.userNameInput}
                 placeholder="Password"
                 secureTextEntry={true}
@@ -119,17 +122,19 @@ const Login: FC = () => {
             { error ? <Text style={{ color: 'red', fontSize: 12, marginLeft: wp(15)}}>{error}</Text> : null}
             
             <TouchableOpacity
+                testID="LoginButton"
                 style={{...styles.btnLogin, alignSelf: "center"}}
                 onPress={() => validate()}
             >
-                <Text style={styles.txtLabel}>{"Login"}</Text>
+                <Text testID="labelLogin" style={styles.txtLabel}>{"Login"}</Text>
             </TouchableOpacity>
 
             <TouchableOpacity
-              onPress={() => navigation.navigate('SignUp')}>
-              <Text style={{...styles.txtSignUp, marginTop: hp(3)}}>
+                testID="SignUpButton"
+                onPress={() => navigation.navigate('SignUp')}>
+              <Text testID="labelNewUsr" style={{...styles.txtSignUp, marginTop: hp(3)}}>
                 New User ? 
-                <Text style={styles.btnSignUp}> SignUp</Text>
+                <Text testID="labelSignup" style={styles.btnSignUp}> SignUp</Text>
               </Text>
             </TouchableOpacity>
         </View>
