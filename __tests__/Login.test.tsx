@@ -1,9 +1,11 @@
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import Login from '../src/Screens/Login';
-import renderer, {act, create} from 'react-test-renderer';
+import TestRenderer, {act, create} from 'react-test-renderer';
 
 describe("Check Login Screen",()=>{
+    jest.useFakeTimers();
+
     const params: any = {
         navigation: { navigate: jest.fn() },
     }
@@ -28,19 +30,23 @@ describe("Check Login Screen",()=>{
     });
 
     test("UserName Field", ()=>{
-        const userName =  tree.root.findByProps({ testID: "UserName" }).props;
-        act(() => {
-            userName.onChangeText();
-        });
-        expect(userName).toBeTruthy();
+        setTimeout(() => {
+            const userName =  tree.root.findByProps({ testID: "UserName" }).props;
+            act(() => {
+                userName.onChangeText();
+            });
+            expect(userName).toBeTruthy();
+        },700);
     })
 
     test("Password Field", ()=>{
-        const pwd =  tree.root.findByProps({ testID: "Pwd" }).props;
-        act(() => {
-            pwd.onChangeText();
-        });
-        expect(pwd).toBeTruthy();
+        setTimeout(() => {
+            const pwd =  tree.root.findByProps({ testID: "Pwd" }).props;
+            act(() => {
+                pwd.onChangeText();
+            });
+            expect(pwd).toBeTruthy();
+        }, 700);
     })
 
     test('Login Button Label', () => {
@@ -67,11 +73,13 @@ describe("Check Login Screen",()=>{
     })
 
     test("SingUpButton onPress", ()=>{
-        const singUpBtn =  tree.root.findByProps({ testID: "SignUpButton" }).props;
-        act(() => {
-            singUpBtn.onPress();
-        });
-        expect(singUpBtn).toBeTruthy();
+        setTimeout(() => {
+            const singUpBtn =  tree.root.findByProps({ testID: "SignUpButton" }).props;
+            act(() => {
+                singUpBtn.onPress();
+            });
+            expect(singUpBtn).toBeTruthy();
+        }, 700);
     })
 
 })

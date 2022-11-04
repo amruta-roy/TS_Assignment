@@ -53,7 +53,7 @@ const AllPosts : FC = () => {
             "https://jsonplaceholder.typicode.com/posts"
         )
         .then( (res) => {
-            console.log("Response is -", res.data);
+            //console.log("Response is -", res.data);
             // set both the data sets to the fetched data.
             setMasterDataSource(res.data);
             setFilteredDataSource(res.data);
@@ -108,18 +108,13 @@ const AllPosts : FC = () => {
 
         // check whether 'filteredDataSource' has data
         if (filteredDataSource.length > 0) {
+                // push the items to be rendered into 'items' array
+                // 'Post' component is used to render each of the record
             filteredDataSource.forEach((item:postType) => {
                 items.push(
                     <Post key={item.id} post={item} />
                 );
             })
-            // for (let item of filteredDataSource) {
-            //     // push the items to be rendered into 'items' array
-            //     // 'Post' component is used to render each of the record
-            //     items.push(
-            //                 <Post key={item.title} post={item} navigation={navigation} />
-            //     );
-            // }
         }
         // return the 'items' array
         return items;
@@ -144,6 +139,7 @@ const AllPosts : FC = () => {
                     <View>
                         {/* Display the Search Box */}
                         <TextInput
+                            testID='searchBox'
                             placeholder={"Search"}
                             placeholderTextColor='#36454F'
                             style={styles.searchTxtInp}

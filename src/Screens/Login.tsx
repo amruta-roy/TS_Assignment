@@ -96,6 +96,18 @@ const Login: FC = () => {
         }
     }
 
+    const updateUserName = (usrName: string) => {
+        setUserName(usrName);
+    }
+
+    const updatePwd = (pwd: string) => {
+        setPassword(pwd);
+    }
+
+    const signUp = () => {
+        navigation.navigate('SignUp')
+    }
+
     return(
         <View>
             <Text 
@@ -107,7 +119,7 @@ const Login: FC = () => {
                 placeholder="UserName"
                 placeholderTextColor={'grey'}
                 value={userName}
-                onChangeText={(value)=> setUserName(value)}
+                onChangeText={(value) => updateUserName(value)}
             />
 
             <TextInput
@@ -116,7 +128,7 @@ const Login: FC = () => {
                 placeholder="Password"
                 secureTextEntry={true}
                 value={password}
-                onChangeText={(value)=> setPassword(value)}
+                onChangeText={(value)=> updatePwd(value)}
             />
 
             { error ? <Text style={{ color: 'red', fontSize: 12, marginLeft: wp(15)}}>{error}</Text> : null}
@@ -124,14 +136,14 @@ const Login: FC = () => {
             <TouchableOpacity
                 testID="LoginButton"
                 style={{...styles.btnLogin, alignSelf: "center"}}
-                onPress={() => validate()}
+                onPress={validate}
             >
                 <Text testID="labelLogin" style={styles.txtLabel}>{"Login"}</Text>
             </TouchableOpacity>
 
             <TouchableOpacity
                 testID="SignUpButton"
-                onPress={() => navigation.navigate('SignUp')}>
+                onPress={signUp}>
               <Text testID="labelNewUsr" style={{...styles.txtSignUp, marginTop: hp(3)}}>
                 New User ? 
                 <Text testID="labelSignup" style={styles.btnSignUp}> SignUp</Text>

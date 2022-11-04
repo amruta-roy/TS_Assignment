@@ -5,8 +5,10 @@ import SignUp from '../src/Screens/SignUp';
 import renderer, {act, create} from 'react-test-renderer';
 
 describe("Check SingUp Screen",()=>{
+    jest.useFakeTimers();
+    
     const params: any = {
-        navigation: { navigate: jest.fn() },
+        navigation: jest.fn(),
     }
 
     let tree: any;
@@ -35,7 +37,7 @@ describe("Check SingUp Screen",()=>{
         expect(label).toBeTruthy();
     });
 
-    test("UserName Field", ()=>{
+    test("User should be able to enter the UserName", ()=>{
         const userName =  tree.root.findByProps({ testID: "userNameInput" }).props;
         act(() => {
             userName.onChangeText();
@@ -48,7 +50,7 @@ describe("Check SingUp Screen",()=>{
         expect(label).toBeTruthy();
     });
 
-    test("Password Field", ()=>{
+    test("User should be able to enter the password", ()=>{
         const pwd =  tree.root.findByProps({ testID: "pwdInput" }).props;
         act(() => {
             pwd.onChangeText();

@@ -20,6 +20,7 @@ import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { HomeStackNavigator } from "../../App";
 
   type screenNavigation = NativeStackNavigationProp<HomeStackNavigator,'AllPosts', 'Login'>
+ let userNmError = "UserName is not in proper format.";
 
 const SignUp: FC = () => {
 
@@ -30,17 +31,17 @@ const SignUp: FC = () => {
     const navigation = useNavigation<screenNavigation>();
     
     // fucntion to validate the user input - UserName, Password and Confirm Password fields
-    const validate = () => {
+    const validate = (usrName: string, pwd: string, confirmPwd: string) => {
         
         setError('');
 
-        if(!validateName(userName))
-            setError("UserName is not in proper format.");
-        else if ( !validatePassword(password))
+        if(!validateName(usrName))
+            setError(userNmError);
+        else if ( !validatePassword(pwd))
             setError("Password doesn't match the required format");
-        else if ( !validatePassword(confirmPassword))
+        else if ( !validatePassword(confirmPwd))
             setError("Password doesn't match the required format");
-        else if( password != confirmPassword)
+        else if( pwd != confirmPwd)
             setError("The two Passwords do not match");
         else
             addUser();
@@ -87,6 +88,21 @@ const SignUp: FC = () => {
         });
     }
 
+    const updateUserName = (usrName: string) => {
+        setUserName(usrName);
+    }
+
+    const updatePwd = (pwd: string, type: string) => {
+        if(type == "pwd" )
+            setPassword(pwd);
+        else if( type == "confirmPwd")
+            setConfirmPassword(pwd);
+    }
+
+    const signIn = () => {
+        navigation.navigate('Login');
+    }
+
     return(
         <ScrollView>
             {/* Display screen title */}
@@ -106,7 +122,7 @@ const SignUp: FC = () => {
                     placeholder="UserName"
                     placeholderTextColor={'grey'}
                     value={userName}
-                    onChangeText={(value)=> setUserName(value)}
+                    onChangeText={(value) => updateUserName(value)}
                 />
             </View>
 
@@ -122,7 +138,7 @@ const SignUp: FC = () => {
                     placeholder="Password"
                     secureTextEntry={true}
                     value={password}
-                    onChangeText={(value)=> setPassword(value)}
+                    onChangeText={(value)=>updatePwd(value,"pwd")}
                 />
             </View>
 
@@ -138,7 +154,7 @@ const SignUp: FC = () => {
                     placeholder="Confirm Password"
                     secureTextEntry={true}
                     value={confirmPassword}
-                    onChangeText={(value)=> setConfirmPassword(value)}
+                    onChangeText={(value)=>updatePwd(value,"confirmPwd")}
                 />
             </View>
 
@@ -149,7 +165,7 @@ const SignUp: FC = () => {
             <TouchableOpacity
                 testID="createAcntButton"
                 style={{...styles.btnLogin, alignSelf: "center"}}
-                onPress={() => validate()}
+                onPress={() => validate(userName, password, confirmPassword)}
             >
                 <Text testID="createAcntLabel" style={styles.txtLabel}>Create Account</Text>
             </TouchableOpacity>
@@ -157,7 +173,7 @@ const SignUp: FC = () => {
             {/* Provide the user option to redirect to Login Screen if already registered */}
             <TouchableOpacity
                 testID="signInButton"
-                onPress={() => navigation.navigate('Login')}
+                onPress={signIn}
             >
               <Text testID="alreadyUsrLabel" style={{...styles.txtSignUp, marginTop: hp(3)}}>
                 Already an User ? 

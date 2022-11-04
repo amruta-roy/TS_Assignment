@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Check AllPosts Screen renders 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#FFF",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#FFF",
+        "flex": 1,
+        "marginTop": 533.5,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#36454F",
+          "fontSize": 17,
+          "fontWeight": "bold",
+        }
+      }
+    >
+      Loading data.......
+    </Text>
+  </View>
+</View>
+`;

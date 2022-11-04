@@ -6,10 +6,7 @@ import {
     StyleSheet
 } from 'react-native';
 
-import {
-    widthPercentageToDP as wp,
-    heightPercentageToDP as hp,
-  } from 'react-native-responsive-screen';
+import { widthPercentageToDP as wp, heightPercentageToDP as hp, } from 'react-native-responsive-screen';
 
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
@@ -36,7 +33,8 @@ const Post: FC<Props> = (props) => {
 
     return (
         <View style={{flex:1}}>
-            <TouchableOpacity
+            <TouchableOpacity 
+                testID='openPost'
                 style={postStyles.postView}
                 onPress={()=> {
                     navigation.navigate("PostDetails", { post : post });
@@ -61,14 +59,6 @@ const Post: FC<Props> = (props) => {
                         { post.title }
                     </Text>
                 </View>
-            
-                {/* <View style={{ height: hp(1)}}></View>
-                <Text style={{  width:'100%', paddingHorizontal: wp(4), fontWeight: 'bold', fontSize: 16, color: '#AA2282' }}>
-                    Desc :
-                </Text>
-                <Text style={{  width:'100%', paddingHorizontal: wp(4) }}>
-                   { post.body}
-                </Text> */}
             </TouchableOpacity>
             <View style={{height:hp(2)}}></View>
         </View>

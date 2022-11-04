@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">48.71% </span>
+                <span class="strong">58.33% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>19/39</span>
+                <span class='fraction'>28/48</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">33.33% </span>
+                <span class="strong">43.75% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>4/12</span>
+                <span class='fraction'>7/16</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">64.28% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>9/14</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">58.33% </span>
-                <span class="quiet">Functions</span>
-                <span class='fraction'>7/12</span>
-            </div>
-        
-            
-            <div class='fl pad1y space-right2'>
-                <span class="strong">48.71% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>19/39</span>
+                <span class='fraction'>28/48</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line medium'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -351,7 +351,23 @@
 <a name='L286'></a><a href='#L286'>286</a>
 <a name='L287'></a><a href='#L287'>287</a>
 <a name='L288'></a><a href='#L288'>288</a>
-<a name='L289'></a><a href='#L289'>289</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L289'></a><a href='#L289'>289</a>
+<a name='L290'></a><a href='#L290'>290</a>
+<a name='L291'></a><a href='#L291'>291</a>
+<a name='L292'></a><a href='#L292'>292</a>
+<a name='L293'></a><a href='#L293'>293</a>
+<a name='L294'></a><a href='#L294'>294</a>
+<a name='L295'></a><a href='#L295'>295</a>
+<a name='L296'></a><a href='#L296'>296</a>
+<a name='L297'></a><a href='#L297'>297</a>
+<a name='L298'></a><a href='#L298'>298</a>
+<a name='L299'></a><a href='#L299'>299</a>
+<a name='L300'></a><a href='#L300'>300</a>
+<a name='L301'></a><a href='#L301'>301</a>
+<a name='L302'></a><a href='#L302'>302</a>
+<a name='L303'></a><a href='#L303'>303</a>
+<a name='L304'></a><a href='#L304'>304</a>
+<a name='L305'></a><a href='#L305'>305</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -373,6 +389,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -441,6 +458,21 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -510,7 +542,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -661,6 +693,7 @@ import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { HomeStackNavigator } from "../../App";
 &nbsp;
   type screenNavigation = NativeStackNavigationProp&lt;HomeStackNavigator,'AllPosts', 'Login'&gt;
+ let userNmError = "UserName is not in proper format.";
 &nbsp;
 const SignUp: FC = () =&gt; {
 &nbsp;
@@ -671,17 +704,17 @@ const SignUp: FC = () =&gt; {
     const navigation = useNavigation&lt;screenNavigation&gt;();
     
     // fucntion to validate the user input - UserName, Password and Confirm Password fields
-    const validate = () =&gt; {
+    const validate = (usrName: string, pwd: string, confirmPwd: string) =&gt; {
         
         setError('');
 &nbsp;
-        <span class="missing-if-branch" title="if path not taken" >I</span>if(!validateName(userName))
-<span class="cstat-no" title="statement not covered" >            setError("UserName is not in proper format.");</span>
-        else if ( !validatePassword(password))
+        <span class="missing-if-branch" title="if path not taken" >I</span>if(!validateName(usrName))
+<span class="cstat-no" title="statement not covered" >            setError(userNmError);</span>
+        else if ( !validatePassword(pwd))
             setError("Password doesn't match the required format");
-        else <span class="cstat-no" title="statement not covered" ><span class="missing-if-branch" title="else path not taken" >E</span>if ( !validatePassword(confirmPassword))</span>
+        else <span class="cstat-no" title="statement not covered" ><span class="missing-if-branch" title="else path not taken" >E</span>if ( !validatePassword(confirmPwd))</span>
 <span class="cstat-no" title="statement not covered" >            setError("Password doesn't match the required format");</span>
-        else <span class="cstat-no" title="statement not covered" >if( password != confirmPassword)</span>
+        else <span class="cstat-no" title="statement not covered" >if( pwd != confirmPwd)</span>
 <span class="cstat-no" title="statement not covered" >            setError("The two Passwords do not match");</span>
         else
 <span class="cstat-no" title="statement not covered" >            addUser();</span>
@@ -728,6 +761,21 @@ const SignUp: FC = () =&gt; {
         });
     }
 &nbsp;
+    const updateUserName = (usrName: string) =&gt; {
+        setUserName(usrName);
+    }
+&nbsp;
+    const updatePwd = (pwd: string, type: string) =&gt; {
+        if(type == "pwd" )
+            setPassword(pwd);
+        else <span class="missing-if-branch" title="else path not taken" >E</span>if( type == "confirmPwd")
+            setConfirmPassword(pwd);
+    }
+&nbsp;
+    const signIn = () =&gt; {
+        navigation.navigate('Login');
+    }
+&nbsp;
     return(
         &lt;ScrollView&gt;
             {/* Display screen title */}
@@ -747,7 +795,7 @@ const SignUp: FC = () =&gt; {
                     placeholder="UserName"
                     placeholderTextColor={'grey'}
                     value={userName}
-                    onChangeText={(value)=&gt; setUserName(value)}
+                    onChangeText={(value) =&gt; updateUserName(value)}
                 /&gt;
             &lt;/View&gt;
 &nbsp;
@@ -763,7 +811,7 @@ const SignUp: FC = () =&gt; {
                     placeholder="Password"
                     secureTextEntry={true}
                     value={password}
-                    onChangeText={(value)=&gt; setPassword(value)}
+                    onChangeText={(value)=&gt;updatePwd(value,"pwd")}
                 /&gt;
             &lt;/View&gt;
 &nbsp;
@@ -779,7 +827,7 @@ const SignUp: FC = () =&gt; {
                     placeholder="Confirm Password"
                     secureTextEntry={true}
                     value={confirmPassword}
-                    onChangeText={(value)=&gt; setConfirmPassword(value)}
+                    onChangeText={(value)=&gt;updatePwd(value,"confirmPwd")}
                 /&gt;
             &lt;/View&gt;
 &nbsp;
@@ -790,7 +838,7 @@ const SignUp: FC = () =&gt; {
             &lt;TouchableOpacity
                 testID="createAcntButton"
                 style={{...styles.btnLogin, alignSelf: "center"}}
-                onPress={() =&gt; validate()}
+                onPress={() =&gt; validate(userName, password, confirmPassword)}
             &gt;
                 &lt;Text testID="createAcntLabel" style={styles.txtLabel}&gt;Create Account&lt;/Text&gt;
             &lt;/TouchableOpacity&gt;
@@ -798,7 +846,7 @@ const SignUp: FC = () =&gt; {
             {/* Provide the user option to redirect to Login Screen if already registered */}
             &lt;TouchableOpacity
                 testID="signInButton"
-                onPress={() =&gt; navigation.navigate('Login')}
+                onPress={signIn}
             &gt;
               &lt;Text testID="alreadyUsrLabel" style={{...styles.txtSignUp, marginTop: hp(3)}}&gt;
                 Already an User ? 
@@ -934,7 +982,7 @@ export default SignUp;</pre></td></tr></table></pre>
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2022-11-01T14:23:20.953Z
+                at 2022-11-04T11:51:39.366Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>

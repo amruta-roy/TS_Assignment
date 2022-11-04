@@ -49,12 +49,6 @@ const PostDetails : FC = () => {
         <>
             <View style={{ flex: 1 , backgroundColor: '#FFF' , alignItems: 'center' , justifyContent: 'center' }}>
             <View style={{ height: hp(50) , width: wp(85), flexDirection: 'column', alignItems: 'center', justifyContent: 'flex-start', backgroundColor: '#CFF6FF' , borderRadius: 5 , elevation: 5}}>
-                {/*  Display the Profile Picture of the record */}
-                {/* <Image 
-                    style={ styles.profileScreenImageView } 
-                    source={PostImage}
-                /> */}
-                
                 {/*  Display "Id" , "Title", "Body" of the Post */}
                 <View style={{ width: wp(70), height: hp(20), flexDirection: 'column' , alignItems:'flex-start', justifyContent:'flex-start', marginTop: hp(4), borderWidth:0 }}>
                     <Text style={[styles.postTitleTxt, {alignSelf: 'center', paddingBottom: hp(2), textTransform:'uppercase', textDecorationLine:'underline'}]}>Post Details</Text>
